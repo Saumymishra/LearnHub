@@ -54,7 +54,7 @@ const CourseUpload = () => {
         return;
       }
 
-      const createCourseRes = await fetch("http://localhost:5000/api/courses", {
+      const createCourseRes = await fetch("https://liveroom-backend.onrender.com/api/courses", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -75,7 +75,7 @@ const CourseUpload = () => {
         formData.append("file", file);
 
         const uploadRes = await fetch(
-          `http://localhost:5000/api/courses/${courseData._id}/upload`,
+          `https://liveroom-backend.onrender.com/api/courses/${courseData._id}/upload`,
           {
             method: "POST",
             headers: {
