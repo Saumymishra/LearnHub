@@ -21,13 +21,13 @@ const CourseDetail = () => {
         const token = localStorage.getItem("token");
 
         const [coursesRes, statsRes] = await Promise.all([
-          fetch("http://localhost:5000/api/user/dashboard/enrolled-courses", {
+          fetch("https://liveroom-backend.onrender.com/api/user/dashboard/enrolled-courses", {
             headers: {
               Authorization: `Bearer ${token}`,
               "Content-Type": "application/json",
             },
           }),
-          fetch("http://localhost:5000/api/user/dashboard/stats", {
+          fetch("https://liveroom-backend.onrender.com/api/user/dashboard/stats", {
             headers: {
               Authorization: `Bearer ${token}`,
               "Content-Type": "application/json",
